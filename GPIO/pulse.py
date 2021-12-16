@@ -21,4 +21,4 @@ def pulse( pin_nr, high_time, low_time ):
 led = 18
 GPIO.setup( led, GPIO.OUT )
 while True:
-   pulse( led, 0.2, 0.2 )
+   pulse( led, 0.2, 1.2 )
