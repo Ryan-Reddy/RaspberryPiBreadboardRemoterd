@@ -6,14 +6,20 @@ GPIO.setwarnings( 0 )
 print( "GPIO morse code" )
 
 def pulse( pin_nr, high_time, low_time ):
-   """
-   Geef een puls op de pin:
-   Maak de pin pin_nr hoog, wacht high_time,
-   maak de pin laag, en wacht nog low_time
-   """
-   # copieer hier je implementatie van pulse
+   while True:
+      GPIO.output(pin_nr, GPIO.HIGH )
+      time.sleep(high_time)
+      GPIO.output(pin_nr,GPIO.LOW)
+      time.sleep(low_time)
+
 
 def morse( pin_nr, dot_length, text ):
+   for i in text:
+      if i == '.':
+         pulse(pin_nr, dot_length, dot_length)
+      if i == '-':
+         pulse(pin_nr, dot_length*2, dot_length*2)
+
    """
    Laat de text horen als morse code.
    De pin_nr is de pin die gebruikt wordt.
