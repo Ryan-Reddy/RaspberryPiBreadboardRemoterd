@@ -6,11 +6,10 @@ GPIO.setwarnings( 0 )
 print( "GPIO morse code" )
 
 def pulse( pin_nr, high_time, low_time ):
-   while True:
-      GPIO.output(pin_nr, GPIO.HIGH )
-      time.sleep(high_time)
-      GPIO.output(pin_nr,GPIO.LOW)
-      time.sleep(low_time)
+   GPIO.output(pin_nr, GPIO.HIGH )
+   time.sleep(high_time)
+   GPIO.output(pin_nr,GPIO.LOW)
+   time.sleep(low_time)
 
 
 def morse( pin_nr, dot_length, text ):
