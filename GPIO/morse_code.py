@@ -17,7 +17,9 @@ def morse( pin_nr, dot_length, text ):
       if i == '.':
          pulse(pin_nr, dot_length, dot_length)
       if i == '-':
-         pulse(pin_nr, dot_length*2, dot_length*2)
+         pulse(pin_nr, dot_length*3, dot_length)
+      if i == ' ':
+         time.sleep(dot_length*3)
 
    """
    Laat de text horen als morse code.
