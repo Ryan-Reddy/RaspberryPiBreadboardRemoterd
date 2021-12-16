@@ -6,9 +6,14 @@ GPIO.setwarnings( 0 )
 print( "servo wave" )
 
 def pulse( pin, delay1, delay2 ):
-   # copieer hier je implementatie van de pulse functie
+   while True:
+      GPIO.output(pin_nr, GPIO.HIGH)
+      time.sleep(delay1)
+      GPIO.output(pin_nr, GPIO.LOW)
+      time.sleep(low_time)
 
 def servo_pulse( pin_nr, position ):
+
    """
    Send a servo pulse on the specified gpio pin 
    that causes the servo to turn to the specified position, and
