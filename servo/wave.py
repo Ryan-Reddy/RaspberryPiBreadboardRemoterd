@@ -5,14 +5,17 @@ GPIO.setwarnings( 0 )
 
 print( "servo wave" )
 
-def pulse( pin, delay1, delay2 ):
+def pulse(pin_nr, high_time, low_time):
    while True:
       GPIO.output(pin_nr, GPIO.HIGH)
-      time.sleep(delay1)
+      time.sleep(high_time)
       GPIO.output(pin_nr, GPIO.LOW)
       time.sleep(low_time)
 
 def servo_pulse( pin_nr, position ):
+      pulse(pin_nr,0.0015,0.020)
+
+   """send pulse 1, 0.5-2.5ms"""
 
    """
    Send a servo pulse on the specified gpio pin 
