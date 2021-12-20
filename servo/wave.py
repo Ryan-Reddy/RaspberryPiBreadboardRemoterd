@@ -13,9 +13,7 @@ def pulse(pin_nr, high_time, low_time):
       time.sleep(low_time)
 
 def servo_pulse( pin_nr, position ):
-      pulse(pin_nr,0.0015,0.020)
-
-   """send pulse 1, 0.5-2.5ms"""
+   pulse(pin_nr,100,50)
 
    """
    Send a servo pulse on the specified gpio pin 
@@ -35,6 +33,8 @@ servo = 25
 GPIO.setup( servo, GPIO.OUT )
 while True:
    for i in range( 0, 100, 1 ):
+      print(i)
       servo_pulse( servo, i )
    for i in range( 100, 0, -1 ):
+      print(i)
       servo_pulse( servo, i )
