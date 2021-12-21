@@ -21,10 +21,10 @@ def servo_pulse( pin_nr, position ):
       flag = 0
       print('flag-min')
    while flag == 0:
-      pulse(pin_nr,0.0025/100,0.02)
+      pulse(pin_nr,0.0025/180,0.02)
       print('minimum hit')
    while flag == 1:
-      pulse(pin_nr,0.0005/100,0.02)
+      pulse(pin_nr,0.0005/180,0.02)
       print('maximum hit')
 
 
