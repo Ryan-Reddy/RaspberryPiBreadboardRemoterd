@@ -17,7 +17,7 @@ def servo_pulse( pin_nr, position ):
    if position < 100:
       pulse(pin_nr,0.00025,0.02)
    if position == 100:
-      pulse(pin_nr,0.00005,0.02)*100
+      pulse(pin_nr,0.00005,0.02)
 
    """
    Send a servo pulse on the specified gpio pin 
