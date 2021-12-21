@@ -14,10 +14,20 @@ def pulse(pin_nr, high_time, low_time):
 
 def servo_pulse( pin_nr, position ):
    print('start servo_pulse',pin_nr,position)
-   if position < 100:
-      pulse(pin_nr,0.00025,0.02)
    if position == 100:
-      pulse(pin_nr,0.00005,0.02)
+      flag = 1
+      print('flag-max')
+   if position == 0:
+      flag = 0
+      print('flag-min')
+   while flag == 0:
+      pulse(pin_nr,0.0025/100,0.02)
+      print('minimum hit')
+   while flag == 1:
+      pulse(pin_nr,0.0005/100,0.02)
+      print('maximum hit')
+
+
 
    """
    Send a servo pulse on the specified gpio pin 
