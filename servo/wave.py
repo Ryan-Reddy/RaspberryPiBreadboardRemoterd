@@ -13,7 +13,11 @@ def pulse(pin_nr, high_time, low_time):
       time.sleep(low_time)
 
 def servo_pulse( pin_nr, position ):
-   pulse(pin_nr,100,50)
+   print('start servo_pulse',pin_nr,position)
+   if position < 100:
+      pulse(pin_nr,0.00025,0.02)
+   if position == 100:
+      pulse(pin_nr,0.00005,0.02)*100
 
    """
    Send a servo pulse on the specified gpio pin 
