@@ -11,14 +11,17 @@ switch_off_24 = 24
 
 GPIO.setup( led, GPIO.OUT )
 GPIO.setup(switch_on_23, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-GPIO.setup(switch_on_24, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(switch_off_24, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 
 while True:
+
    if( GPIO.input(switch_on_23)):
       GPIO.output( led, GPIO.HIGH )
-   if( GPIO.input(switch_on_24)):
+      GPIO.setup(switch_on_23, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+   if( GPIO.input(switch_off_24)):
       GPIO.output( led, GPIO.LOW )
-   # else:
-   #    GPIO.output( led, GPIO.LOW )
+      GPIO.setup(switch_on_23, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+s
+
    time.sleep( 0.1 )
