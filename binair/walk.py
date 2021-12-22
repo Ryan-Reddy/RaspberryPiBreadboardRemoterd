@@ -53,7 +53,8 @@ while True:
    if( GPIO.input(switch_on_23)):
        switch = True
        KITT(switch)
-
+# TODO:
+# fix switch off ~ not working atm
    if( GPIO.input(switch_off_24)):
        switch = False
        KITT(switch)
