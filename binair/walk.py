@@ -5,7 +5,7 @@ GPIO.setwarnings( 0 )
 
 print( "binair walk" )
 
-led_pins = [ 18, 4, 17, 27, 22 ]
+led_pins = [ 18, 4, 17, 27, 22 ,10]
 
 for gpio in led_pins:
    GPIO.setup( gpio, GPIO.OUT )
@@ -26,6 +26,8 @@ while True:
    leds( led_pins,  4, delay )
    leds( led_pins,  8, delay )
    leds( led_pins, 16, delay )
+   leds( led_pins, 32, delay )
+
 
 zzz
 https://i.ytimg.com/vi/QmQRmZkUrVU/maxresdefault.jpg
