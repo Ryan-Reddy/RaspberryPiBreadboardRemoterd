@@ -7,18 +7,11 @@ print( "input copy" )
 
 pot = 16
 
-GPIO.setup(switch_on_23, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-GPIO.setup(switch_off_24, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-
+GPIO.setup(pot, GPIO.IN)
 
 while True:
 
-   if( GPIO.input(switch_on_23)):
-      GPIO.output( led, GPIO.HIGH )
-      GPIO.setup(switch_on_23, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-   if( GPIO.input(switch_off_24)):
-      GPIO.output( led, GPIO.LOW )
-      GPIO.setup(switch_on_23, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+   time.sleep( 0.2 )
 
-
-   time.sleep( 0.1 )
+   # TODO:
+   # I need a analoge to digital convertor to make this work..
