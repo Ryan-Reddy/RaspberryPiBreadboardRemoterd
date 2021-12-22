@@ -22,6 +22,6 @@ while True:
    if( GPIO.input(switch_off_24)):
       GPIO.output( led, GPIO.LOW )
       GPIO.setup(switch_on_23, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
-s
+
 
    time.sleep( 0.1 )
