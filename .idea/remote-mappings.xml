@@ -11,6 +11,13 @@
             </list>
           </settings>
         </remote-mappings>
+        <remote-mappings server-id="python@sftp://pi@192.168.178.42:22/usr/bin/python">
+          <settings>
+            <list>
+              <mapping local-root="$PROJECT_DIR$" remote-root="/home/pi/Desktop/python_projects/raspberry pi breadboard" />
+            </list>
+          </settings>
+        </remote-mappings>
       </list>
     </list>
   </component>
