@@ -4,6 +4,13 @@
     <list>
       <list>
         <remote-mappings server-id="python@91318593-6178-4205-9fc9-f06c40a04d7a" />
+        <remote-mappings server-id="python@sftp://pi@rureddy.duckdns.org:22/usr/bin/python">
+          <settings>
+            <list>
+              <mapping local-root="$PROJECT_DIR$" remote-root="/home/pi/Desktop/python_projects" />
+            </list>
+          </settings>
+        </remote-mappings>
       </list>
     </list>
   </component>
